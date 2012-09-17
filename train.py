@@ -1,3 +1,5 @@
+'http://fastml.com/best-buy-mobile-contest/'
+
 import sys, csv, re
 
 def prepare( query ):
@@ -45,8 +47,8 @@ headers = reader.next()
 o = open( output_file, 'wb' )
 writer = csv.writer( o, delimiter = " " )
 
-n = 0
-m = 0
+n = 0	# all test cases
+m = 0	# the ones we have mapping for
 
 for line in reader:
 	n += 1
@@ -77,4 +79,4 @@ for line in reader:
 		
 	writer.writerow( skus )
 		
-print "%s / %s (%s)" % ( m, n, 1.0 * m / n )
+print "Used mapping in %s / %s (%s)" % ( m, n, 1.0 * m / n )

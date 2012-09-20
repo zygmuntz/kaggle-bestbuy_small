@@ -42,4 +42,3 @@ map_score = sum( aps ) / n
 print predictions_file
 print "Found clicked SKU in %s / %s cases (%s)" % ( m, n, 1.0 * m / n )
 print "MAP: %s" % ( map_score )
-print 

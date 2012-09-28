@@ -114,8 +114,7 @@ for line in reader:
 		else:
 			corrected_queries = correct( nqueries, query )
 		
-		# only needed for edits1
-		corrected_found = [x for x in corrected_queries if x in mapping]
+		corrected_found = [x for x in corrected_queries if x in mapping and x != query]
 		
 		if corrected_found:
 			#print len( corrected_found )

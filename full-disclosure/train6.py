@@ -105,7 +105,6 @@ for line in reader:
 			skus.append( sku )
 		#print skus
 
-		skus.extend( popular_skus )
 		skus = skus[0:5]
 	
 	# query spelling correction
@@ -113,7 +112,7 @@ for line in reader:
 		if len( query ) < 6:
 			corrected_queries = edits1( query )
 		else:
-			corrected_queries = correct( nqueries, query ) # bylo nwords
+			corrected_queries = correct( nqueries, query )
 		
 		# only needed for edits1
 		corrected_found = [x for x in corrected_queries if x in mapping]
